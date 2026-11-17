@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+*.ts
+*.mp4
+*.wav
+*.log
