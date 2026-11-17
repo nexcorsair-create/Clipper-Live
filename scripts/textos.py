@@ -240,9 +240,9 @@ T = {
                       "pt": "  … baixando o detector de rosto (OpenCV YuNet)"},
     "yunet_ok": {"es": "  ✓ detector de caras", "en": "  ✓ face detector", "pt": "  ✓ detector de rosto"},
     "bajando_modelos": {
-        "es": "  … descargando los modelos de escucha ('{a}' y '{b}', una sola vez)",
-        "en": "  … downloading the listening models ('{a}' and '{b}', only once)",
-        "pt": "  … baixando os modelos de escuta ('{a}' e '{b}', uma vez só)"},
+        "es": "  … descargando los modelos de escucha ({m}; una sola vez)",
+        "en": "  … downloading the listening models ({m}; only once)",
+        "pt": "  … baixando os modelos de escuta ({m}; uma vez só)"},
     "modelos_ok": {"es": "  ✓ modelos de escucha", "en": "  ✓ listening models", "pt": "  ✓ modelos de escuta"},
     "roto": {"es": "\n  ✗ no funciona: {lista}. Ejecuta 'clip.py instalar' de nuevo.",
              "en": "\n  ✗ not working: {lista}. Run 'clip.py install' again.",

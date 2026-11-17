@@ -121,9 +121,10 @@ def instalar():
                             YUNET_URL, str(YUNET)], check=True)
     print(t("yunet_ok"))
     cfg = config()
-    print(t("bajando_modelos", a=cfg["modelo_live"], b=cfg["modelo_legenda"]))
+    modelos = list(dict.fromkeys([cfg["modelo_live"], cfg["modelo_legenda"]]))   # sem repetir
+    print(t("bajando_modelos", m=", ".join(modelos)))
     subprocess.run([str(VENV_PY), "-c", "import sys; from faster_whisper import WhisperModel as W; "
-                    "[W(m) for m in sys.argv[1:]]", cfg["modelo_live"], cfg["modelo_legenda"]], check=True)
+                    "[W(m) for m in sys.argv[1:]]", *modelos], check=True)
     print(t("modelos_ok"))
     quebrado = testar()
     gravar_json(VERSOES, {"quando": agora(), "versoes": versoes_instaladas(), "quebrado": quebrado})
